@@ -4,3 +4,31 @@ This repo shows how you can build a graphql server that uses [prisma](https://ww
 ## Models
 
 We will have two models; a `User` model and a `Feedback` model with the below structure.
+
+
+### User Model
+
+| Column Name  | Data Type  |
+|--------------|------------|
+| id           | Int        |
+| date_created | DateTime   |
+| firstName    | String     |
+| lastName     | String     |
+| email        | String     |
+| active       | Boolean    |
+| feedbacks    | Feedback[] |
+
+### Feedback Model
+
+| Column Name   | Data Type    |
+|---------------|--------------|
+| id            | Int          |
+| date_created  | DateTime     |
+| published     | Boolean      |
+| feedback_type | FeedbackType |
+| comment       | String       |
+| user_id       | User         |
+
+
+
+
