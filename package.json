@@ -1,6 +1,7 @@
 {
   "name": "graphql-with-prisma",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "repository": "https://github.com/nairobi-graphql-meetup/graphql-with-prisma.git",
   "author": "Joe Ng'ethe <joeynimu@gmail.com>",
