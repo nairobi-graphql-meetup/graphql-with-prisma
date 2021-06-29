@@ -27,8 +27,8 @@ model Feedback {
   id            Int      @id @default(autoincrement())
   date_created  DateTime @default(now())
   published     Boolean  @default(true)
-  comment       String
   feedback_type String
+  comment       String
   user          User     @relation(references: [id], fields: [userId])
   userId        Int
 }
