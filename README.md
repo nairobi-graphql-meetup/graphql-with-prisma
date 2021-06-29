@@ -27,7 +27,7 @@ We will have two models; a `User` model and a `Feedback` model with the below st
 | published     | Boolean      |
 | feedback_type | FeedbackType |
 | comment       | String       |
-| user_id       | User         |
+| user          | User         |
 
 We will also have a `FeedbackType` `enum` which will be of type `Idea`, `Issue` or `Other`.
 
