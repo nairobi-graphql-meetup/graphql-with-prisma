@@ -1,20 +1,24 @@
-import { ApolloServer, gql } from "apollo-server"
+const { ApolloServer, gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Query {
     hello: String
   }
-`
+`;
 
 const resolvers = {
   Query: {
-    hello: () => 'World'
-  }
-}
+    hello: () => "World",
+  },
+};
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
-})
+  resolvers,
+});
 
-server.listen().then(({ url}) => console.log(`Server starter at ${url}`))
+
+
+server
+  .listen()
+  .then(({ url }) => console.log(`🚀 server started at ${url}`));
