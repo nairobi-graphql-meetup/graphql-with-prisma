@@ -135,17 +135,15 @@ We will have two models; a `User` model and a `Feedback` model with the below st
 +---------------+-----------+
 ```
 
-We will also have a `FeedbackType` `enum` which will be of type `Idea`, `Issue` or `Other`.
-
 ## Graphql Queries and Mutations
 
 On the graphql side, we will expose the below queries and mutations on our API;
 
 ### Queries
 
-- `getFeedbacks`: Returns all feedback data. It will accept optional variables; `userId` or `userEmail`. If these variables are passed, the resolved feedback data will be for a speccific `User`.
-
-- `getUsers`: Returns all `Users` in our data source.
+- `users`: Returns all `users`
+- `feedback`: Return all `feedback`
+- `userById`: Return a specific user
 
 ### Mutations
 
