@@ -1,3 +1,6 @@
+# prisma db file
+prisma/db
+
 # Logs
 logs
 *.log

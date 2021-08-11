@@ -16,11 +16,11 @@ generator client {
 model User {
   id           Int        @id @default(autoincrement())
   date_created DateTime   @default(now())
-  firstName    String
-  lastName     String
+  first_name   String
+  last_name    String
   email        String     @unique
   active       Boolean    @default(true)
-  Feedback     Feedback[]
+  feedback     Feedback[]
 }
 
 model Feedback {
@@ -29,6 +29,6 @@ model Feedback {
   published     Boolean  @default(true)
   feedback_type String
   comment       String
-  user          User     @relation(references: [id], fields: [userId])
+  User          User     @relation(fields: [userId], references: [id])
   userId        Int
 }
