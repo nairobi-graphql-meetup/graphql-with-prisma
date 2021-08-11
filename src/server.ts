@@ -9,4 +9,7 @@ const server = new ApolloServer({
   context,
 });
 
-server.listen().then(({ url }) => console.log(`🚀 server started at ${url}`));
+server
+  .listen()
+  .then(({ url }) => console.log(`🚀 server started at ${url}`))
+  .catch((error) => console.log(`failed to start the sever ${error}`));
