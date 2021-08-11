@@ -33,6 +33,11 @@ export const resolvers = {
 
     feedback: async (parent: any, args: any, ctx: Context) => {
       const data = await ctx.prisma.feedback.findMany({
+        where: {
+          feedback_type: {
+            equals: args.feedbackType,
+          },
+        },
         include: {
           User: true,
         },

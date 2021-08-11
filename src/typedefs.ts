@@ -23,7 +23,7 @@ export const typeDefs = gql`
 
   type Query {
     users: [User!]!
-    feedback: [Feedback!]!
+    feedback(feedbackType: feedBackTypeEnum): [Feedback!]!
     userById(userId: Int!): User
   }
 
