@@ -107,26 +107,33 @@ We will have two models; a `User` model and a `Feedback` model with the below st
 
 ### User Model
 
-| Column Name  | Data Type  |
-| ------------ | ---------- |
-| id           | Int        |
-| date_created | DateTime   |
-| firstName    | String     |
-| lastName     | String     |
-| email        | String     |
-| active       | Boolean    |
-| feedbacks    | Feedback[] |
+```
++--------------+-----------+
+| Column Name  | Data Type |
++--------------+-----------+
+| id           | Int       |
+| date_created | DateTime  |
+| first_name   | String    |
+| last_name    | String    |
+| email        | String    |
+| active       | Boolean   |
++--------------+-----------+
+
+```
 
 ### Feedback Model
 
-| Column Name   | Data Type    |
-| ------------- | ------------ |
-| id            | Int          |
-| date_created  | DateTime     |
-| published     | Boolean      |
-| feedback_type | FeedbackType |
-| comment       | String       |
-| user          | User         |
+```
++---------------+-----------+
+|  Column Name  | Data Type |
++---------------+-----------+
+| id            | Int       |
+| date_created  | DateTime  |
+| published     | Boolean   |
+| feedback_type | String    |
+| comment       | String    |
++---------------+-----------+
+```
 
 We will also have a `FeedbackType` `enum` which will be of type `Idea`, `Issue` or `Other`.
 
