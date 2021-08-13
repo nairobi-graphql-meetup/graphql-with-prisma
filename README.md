@@ -145,6 +145,8 @@ We will have two models; a `User` model and a `Feedback` model with the below st
 
 ```prisma
 
+## schema.prisma
+
 datasource db {
   provider = "sqlite"
   url      = "file:./db"
