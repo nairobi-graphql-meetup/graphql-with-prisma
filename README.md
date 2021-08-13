@@ -143,6 +143,46 @@ We will have two models; a `User` model and a `Feedback` model with the below st
 +---------------+-----------+
 ```
 
+```prisma
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// sqlite connector doesn't support enums
+// enum FeedbackType {
+//   IDEA
+//   BUG
+// }
+
+model User {
+  id           Int        @id @default(autoincrement())
+  date_created DateTime   @default(now())
+  first_name   String
+  last_name    String
+  email        String     @unique
+  active       Boolean    @default(true)
+  feedback     Feedback[]
+}
+
+model Feedback {
+  id            Int      @id @default(autoincrement())
+  date_created  DateTime @default(now())
+  published     Boolean  @default(true)
+  feedback_type String
+  comment       String
+  User          User     @relation(fields: [userId], references: [id])
+  userId        Int
+}
+
+
+```
+
 ## Graphql Queries and Mutations
 
 On the graphql side, we will expose the below queries and mutations on our API;
