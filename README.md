@@ -21,6 +21,14 @@ The below are nice to haves/know
 
 If you are using VS Code, I recommend to have this [Prisma extension](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) installed and configured.
 
+## What you will learn
+
+- Modeling out your graphql schema using the SDL first approach
+- Writting `resolvers` for your queries
+- Using Prisma to;
+  - Model out your data layer
+  - Using Prisma client to interact with your database (CRUD operations)
+
 ## Getting started
 
 - Clone the repo `git clone https://github.com/nairobi-graphql-meetup/graphql-with-prisma.git`
